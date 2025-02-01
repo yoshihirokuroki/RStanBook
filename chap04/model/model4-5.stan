@@ -1,7 +1,7 @@
 data {
   int N;
-  real X[N];
-  real Y[N];
+  array[N] real X;  // ← これが正しい記法
+  array[N] real Y;
 }
 
 parameters {
