@@ -38,4 +38,4 @@ fit <- model$sample(
 )
 
 # fitオブジェクトをrdsファイルとして保存
-saveRDS(fit, file = "chap04/output/fit-model4-5.rds")
+fit$save_object("chap04/output/fit-model4-5.rds")

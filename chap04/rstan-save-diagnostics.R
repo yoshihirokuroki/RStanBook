@@ -17,6 +17,8 @@
 # plot(As.mcmc.list(fit))
 # dev.off()
 
+rm(list = ls()) # 現在の環境にあるすべてのオブジェクトを削除
+
 library(cmdstanr)
 library(bayesplot)
 library(posterior)
@@ -28,8 +30,8 @@ fit <- readRDS("chap04/output/fit-model4-5.rds")
 
 # サマリーの出力
 summary_fit <- fit$summary()
-write.table(summary_fit, file = "chap04/output/fit-summary.csv", sep = ",", quote = TRUE, col.names = NA)
 
+# トレースプロット
 traceplot_gg <- mcmc_trace(fit$draws())
 print(traceplot_gg)
 ggsave("chap04/output/fit-traceplot-bayesplot.png", plot = traceplot_gg)
