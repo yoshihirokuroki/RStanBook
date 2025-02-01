@@ -288,6 +288,27 @@
       ],
       "Hash": "6377d4336f5c291b8a89d75fb8074828"
     },
+    "bayesplot": {
+      "Package": "bayesplot",
+      "Version": "1.11.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "dplyr",
+        "ggplot2",
+        "ggridges",
+        "glue",
+        "posterior",
+        "reshape2",
+        "rlang",
+        "stats",
+        "tibble",
+        "tidyselect",
+        "utils"
+      ],
+      "Hash": "c5cde76012ea08e94265ace1b53b77b9"
+    },
     "bit": {
       "Package": "bit",
       "Version": "4.5.0.1",
@@ -388,6 +409,28 @@
       ],
       "Hash": "3f038e5ac7f41d4ac41ce658c85e3042"
     },
+    "cmdstanr": {
+      "Package": "cmdstanr",
+      "Version": "0.8.1.9000",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "cmdstanr",
+      "RemoteUsername": "stan-dev",
+      "RemoteSha": "ce589817907ec450e74a6b31b4bd59d4ed6ccc31",
+      "Requirements": [
+        "R",
+        "R6",
+        "checkmate",
+        "data.table",
+        "jsonlite",
+        "posterior",
+        "processx",
+        "rlang",
+        "withr"
+      ],
+      "Hash": "1a51ae148dd63acc6dbdd0e511b56c59"
+    },
     "coda": {
       "Package": "coda",
       "Version": "0.19-4.1",
@@ -453,6 +496,17 @@
         "utils"
       ],
       "Hash": "859d96e65ef198fd43e82b9628d593ef"
+    },
+    "data.table": {
+      "Package": "data.table",
+      "Version": "1.16.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "methods"
+      ],
+      "Hash": "38bbf05fc2503143db4c734a7e5cab66"
     },
     "desc": {
       "Package": "desc",
@@ -662,6 +716,20 @@
       ],
       "Hash": "3d4156850acc1161f2f24bc61c9217c1"
     },
+    "ggridges": {
+      "Package": "ggridges",
+      "Version": "0.5.6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "ggplot2",
+        "grid",
+        "scales",
+        "withr"
+      ],
+      "Hash": "66488692cb8621bc78df1b9b819497a6"
+    },
     "ggstats": {
       "Package": "ggstats",
       "Version": "0.8.0",
@@ -815,6 +883,16 @@
         "utils"
       ],
       "Hash": "0080607b4a1a7b28979aecef976d8bc2"
+    },
+    "jsonlite": {
+      "Package": "jsonlite",
+      "Version": "1.8.9",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "methods"
+      ],
+      "Hash": "4e993b65c2c3ffbffce7bb3e2c6f832b"
     },
     "labeling": {
       "Package": "labeling",
@@ -1203,6 +1281,20 @@
         "vroom"
       ],
       "Hash": "9de96463d2117f6ac49980577939dfb3"
+    },
+    "remotes": {
+      "Package": "remotes",
+      "Version": "2.5.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "methods",
+        "stats",
+        "tools",
+        "utils"
+      ],
+      "Hash": "3ee025083e66f18db6cf27b56e23e141"
     },
     "renv": {
       "Package": "renv",
