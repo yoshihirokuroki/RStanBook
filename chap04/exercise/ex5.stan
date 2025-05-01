@@ -1,8 +1,8 @@
 data {
   int N1;
   int N2;
-  real Y1[N1];
-  real Y2[N2];
+  array[N1] real Y1;  // 修正: 配列の新しい構文
+  array[N2] real Y2;  // 修正: 配列の新しい構文
 }
 
 parameters {

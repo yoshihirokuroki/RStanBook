@@ -1,9 +1,9 @@
 data {
   int N;
-  int<lower=0, upper=1> A[N];
-  real<lower=0, upper=1> Score[N];
-  int<lower=0> M[N];
-  int<lower=0> Y[N];
+  array[N] int<lower=0, upper=1> A;
+  array[N] real<lower=0, upper=1> Score;
+  array[N] int<lower=0> M;
+  array[N] int<lower=0> Y;
 }
 
 parameters {
@@ -13,18 +13,17 @@ parameters {
 }
 
 transformed parameters {
-  real q[N];
+  array[N] real q;
   for (n in 1:N)
-    q[n] = inv_logit(b1 + b2*A[n] + b3*Score[n]);
+    q[n] = inv_logit(b1 + b2 * A[n] + b3 * Score[n]);
 }
 
 model {
-  for (n in 1:N)
-    Y[n] ~ binomial(M[n], q[n]);
+  Y ~ binomial(M, q);
 }
 
 generated quantities {
-  real y_pred[N];
+  array[N] real y_pred;
   for (n in 1:N)
     y_pred[n] = binomial_rng(M[n], q[n]);
 }

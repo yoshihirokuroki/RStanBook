@@ -1,8 +1,8 @@
 data {
   int N;
-  int<lower=0, upper=1> A[N];
-  real<lower=0, upper=1> Score[N];
-  real<lower=0, upper=1> Y[N];
+  array[N] int<lower=0, upper=1> A;
+  array[N] real<lower=0, upper=1> Score;
+  array[N] real<lower=0, upper=1> Y;
 }
 
 parameters {
@@ -13,18 +13,17 @@ parameters {
 }
 
 transformed parameters {
-  real mu[N];
+  array[N] real mu;
   for (n in 1:N)
-    mu[n] = b1 + b2*A[n] + b3*Score[n];
+    mu[n] = b1 + b2 * A[n] + b3 * Score[n];
 }
 
 model {
-  for (n in 1:N)
-    Y[n] ~ normal(mu[n], sigma);
+  Y ~ normal(mu, sigma);
 }
 
 generated quantities {
-  real y_pred[N];
+  array[N] real y_pred;
   for (n in 1:N)
     y_pred[n] = normal_rng(mu[n], sigma);
 }

@@ -1,4 +1,7 @@
 # library(rstan)
+
+rm(list = ls()) # 現在の環境にあるすべてのオブジェクトを削除
+
 if (!requireNamespace("remotes", quietly = TRUE)) {
   install.packages("remotes")
 }

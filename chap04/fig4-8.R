@@ -54,8 +54,22 @@
 #   labs(y='Y')
 # ggsave(p, file='output/fig4-8-right.png', dpi=300, w=4, h=3)
 
+rm(list = ls()) # 現在の環境にあるすべてのオブジェクトを削除
 
-library(cmdstanr)
+# 必要なパッケージをロード
+# remotes パッケージがない場合はインストール
+if (!requireNamespace("remotes", quietly = TRUE)) {
+  install.packages("remotes")
+}
+
+# GitHub から {cmdstanr} をインストール
+if (!requireNamespace("cmdstanr", quietly = TRUE)) {
+  remotes::install_github("stan-dev/cmdstanr", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+  cmdstanr::install_cmdstan(cores = 4, overwrite = TRUE) # 4コアを使用してビルド（適宜変更）
+  cmdstanr::cmdstan_version()
+}
+
+# library(cmdstanr)
 library(ggplot2)
 library(dplyr)
 library(tidyr)
